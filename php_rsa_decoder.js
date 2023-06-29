@@ -33,15 +33,15 @@ $l = @round(@strlen($out) / $n);
    */
   decode_buff: (data, ext={}) => {
     let r=[];
-    console.log(data.toString());
+    //console.log(data.toString());
     data.toString().split("|").forEach(
       piece=>{
-        console.log(piece);
-        console.log(ext['rsa'].decrypt(piece).toString());
+        //console.log(piece);
+        //console.log(ext['rsa'].decrypt(piece).toString());
         r.push(ext['rsa'].decrypt(piece).toString());
       }
     );
-    console.log(r);
+//console.log(r);
     return Buffer.from(r.join(""));
   }
 }
