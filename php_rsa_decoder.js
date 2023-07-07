@@ -15,7 +15,7 @@ module.exports = {
     return `function asenc($out){
     global $pk;
 $pk = @openssl_pkey_get_public($pk);
-$n = @round(@strlen($out) / 80);
+$n = @round(@strlen($out) / 40);
 $l = @round(@strlen($out) / $n);
     $r = [];
     for ($i = 0; $n > $i; $i++) {
